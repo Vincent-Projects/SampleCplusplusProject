@@ -3,6 +3,7 @@ all: hello_world
 
 #### ADD YOUR COMMAND HERE ####
 hello.o: src/hello.cpp
+	if [ -d "./build" ]; then ""; else mkdir build; fi
 	g++ -o build/hello.o -c src/hello.cpp
 
 hello_world: hello.o main
